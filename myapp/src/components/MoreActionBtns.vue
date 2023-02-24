@@ -5,6 +5,7 @@
                 More
             </button>
             <ul class="dropdown-menu">
+                <li><router-link class="dropdown-item" to="/">Book desk using map</router-link></li>
                 <li><router-link class="dropdown-item" to="/">Book for Multiple Days</router-link></li>
                 <li><router-link class="dropdown-item" to="/showMap">Map</router-link></li>
             </ul>

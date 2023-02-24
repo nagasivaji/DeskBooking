@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-xxl bg-body-tertiary">
+    <nav class="navbar navbar-expand-xxl bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Smart desk booking</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,4 +28,13 @@
 </script>
 
 <style scoped>
+    .navbar-brand{
+        color: white;
+    }
+    .navbar-toggler{
+        color: white;
+    }
+    .navbar-nav .nav-link.active{
+        color: white;
+    }
 </style>
