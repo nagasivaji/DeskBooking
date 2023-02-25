@@ -34,11 +34,11 @@
             <div class="_form">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="">Start Date</span>
-                    <input type="date" class="form-control" placeholder="Select Start Date" aria-label="startDate" aria-describedby="basic-addon1">
+                    <input type="date" class="form-control" placeholder="Select Start Date" aria-label="startDate" aria-describedby="basic-addon1" v-model="startDate">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="">End Date</span>
-                    <input type="date" class="form-control" placeholder="Select End Date" aria-label="endDate" aria-describedby="basic-addon1">
+                    <input type="date" class="form-control" placeholder="Select End Date" aria-label="endDate" aria-describedby="basic-addon1" v-model="endDate">
                 </div>
             </div>
             <div class="_mapDiv">
@@ -58,13 +58,13 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="">Select Date</span>
-                    <input type="date" class="form-control" placeholder="No of seats (max of 6)" aria-label="" aria-describedby="basic-addon1">
+                    <input type="date" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" v-model="selectDate">
                 </div>
                 <div class="_emplIdDiv" v-if="showSeats">
                     <div v-for="index in bookingCount" :key="index">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="">Enter Empl {{index}} ID</span>
-                            <input type="number" class="form-control" placeholder="Enter Employe ID" aria-label="" aria-describedby="basic-addon1" min="1" max="6" id="noOfSeats">
+                            <input type="number" class="form-control" placeholder="Enter Employe ID" aria-label="" aria-describedby="basic-addon1" min="1" max="6" id="noOfSeats" @focusout="addEmplIds">
                         </div>
                     </div>
                 </div>
@@ -91,6 +91,11 @@ export default {
             bookingCount: 1,
             pathArray: [],
             showSeats: false,
+            data: [],
+            startDate: '',
+            endDate: '',
+            selectDate: '',
+            emplIds: []
         }
     },
     methods: {
@@ -100,7 +105,8 @@ export default {
             this.showSeats = false
         },
         getData(data) {
-            console.log(data)
+            // console.log(data)
+            this.data = data
         },
         onClickNoOfSeats (event) {
             // console.log('Seat count'+ event.target.value)
@@ -131,6 +137,24 @@ export default {
                 this.bookingCount = 6
                 this.showSeats = true
             } 
+        },
+        onClickSingleDay() {
+            console.log('single', this.data)
+        },
+        onClickMultipleBooking (){
+            console.log('multiple', this.data, this.startDate, this.endDate)
+        },
+        onClickTeamBooking () {
+            console.log('team', this.data, this.bookingCount, this.emplIds, this.selectDate)
+        },
+        addEmplIds(event) {
+            // console.log(event)
+            // console.log(event.target.value)
+            if(event.target.value !== null && event.target.value !== undefined && event.target.value !== '') {
+                this.emplIds.push(event.target.value)
+                // console.log(this.emplIds)
+            }
+            
         },
         showConfirmation() {
             window.location.href = "http://localhost:3030/#/"

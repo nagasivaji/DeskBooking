@@ -356,7 +356,7 @@ export default {
                 deskId = 'CN-' + deskId.split(' ')[3];
             }
             
-            console.log(deskId)
+            // console.log(deskId)
             if(this.selectedDesks.includes(deskId)) {
                 const index = this.selectedDesks.indexOf(deskId);
                 if (index > -1) { // only splice array when item is found
@@ -366,7 +366,7 @@ export default {
                 this.selectedDesks.push(deskId);
             }   
 
-            console.log(this.bookingCount)
+            // console.log(this.bookingCount)
             if(this.selectedDesks.length > this.bookingCount) {
                 this.selectedDesks.shift()
             }

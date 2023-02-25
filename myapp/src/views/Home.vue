@@ -34,6 +34,7 @@ import StatusInfoVue from '../components/StatusInfo.vue'
 import NavBar from './../components/NavBar.vue'
 import MoreActionBtns from '../components/MoreActionBtns.vue'
 import Map from '../components/Map.vue'
+import { notification } from "ant-design-vue";
 import axios from 'axios';
 
 export default {
@@ -42,7 +43,7 @@ export default {
         NavBar,
         StatusInfoVue,
         MoreActionBtns,
-        Map
+        Map,
     },
     data() {
         return {
@@ -66,7 +67,7 @@ export default {
     methods: {
         onClickOneTapBtn () {
             this.bookingStatus = !this.bookingStatus
-            this.pushNotification()
+            this.showNotification()
         },
         getData() {
 
@@ -202,6 +203,7 @@ export default {
 
             // Invoking Recursive call for shortest path
             this.findPath(grid, visited);
+
         },
         findPath(grid, visited) {
             var node = this.queue.shift()
@@ -268,6 +270,14 @@ export default {
             axios.get("https://jsonplaceholder.typicode.com/posts/1")
             .then(result => {
                 console.log(result.data);
+            })
+        },
+        showNotification() {
+
+            console.log("@@@@@@@@@@@@@@@@@@")
+            this.$notification.success({
+            message: 'Booking Confirmed',
+            description: '11th floor Blue Wing C-102'
             })
         }
     },
