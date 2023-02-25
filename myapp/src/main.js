@@ -14,7 +14,7 @@ const app = createApp(App);
 app.config.globalProperties.$url = 'http://localhost:3030/#'
 
 // For Production purposes
-// Vue.prototype.$url = 'http://localhost:8080/myapp/#'
+// app.config.globalProperties.$url = 'http://localhost:8080/myapp/#'
 
 app.use(router);
 app.use(Antd);
