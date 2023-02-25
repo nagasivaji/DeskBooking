@@ -34,6 +34,7 @@ import StatusInfoVue from '../components/StatusInfo.vue'
 import NavBar from './../components/NavBar.vue'
 import MoreActionBtns from '../components/MoreActionBtns.vue'
 import Map from '../components/Map.vue'
+import axios from 'axios';
 
 export default {
     name: 'Home',
@@ -56,7 +57,11 @@ export default {
             window.location.href = "http://localhost:3030/#/"
         }
         // console.log('Employee ID: ',localStorage.EmployeeID)
-        this.createPathArray()
+        if (this.bookingStatus) {
+            this.createPathArray()
+        }
+
+        this.callAPI()
     },
     methods: {
         onClickOneTapBtn () {
@@ -258,6 +263,12 @@ export default {
                 return true;
             }
             return false;
+        },
+        callAPI () {
+            axios.get("https://jsonplaceholder.typicode.com/posts/1")
+            .then(result => {
+                console.log(result.data);
+            })
         }
     },
 }

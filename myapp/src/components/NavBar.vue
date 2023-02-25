@@ -14,6 +14,9 @@
                     <router-link to="/" class="nav-link active" aria-current="page">My Bookings</router-link>
                 </li>
                 <li class="nav-item">
+                    <router-link to="/more" class="nav-link active" aria-current="page">More</router-link>
+                </li>
+                <li class="nav-item">
                     <router-link to="/" class="nav-link active" aria-current="page">Directions</router-link>
                 </li>
                 <li class="nav-item">

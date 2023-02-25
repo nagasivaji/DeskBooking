@@ -22,7 +22,7 @@
         <!-- SinleDay -->
         <div class="_singleDayDiv" v-if="option === 'singleDay'">
             <div class="_mapDiv">
-                <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" />
+                <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" :myDesk="''"/>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary" @click="onClickSingleDay">Book</button>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="_mapDiv">
-                <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" />
+                <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" :myDesk="''"/>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto mt-5 mb-5">
                 <button class="btn btn-primary" @click="onClickMultipleBooking">Book</button>
@@ -70,13 +70,12 @@
                 </div>
             </div>
             <div class="_mapDiv">
-                <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" />
+                <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" :myDesk="''"/>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto mt-5 mb-5">
                 <button class="btn btn-primary" @click="onClickTeamBooking">Book</button>
             </div>
         </div>
-        <button @click="showConfirmation">done</button>
     </div>
 </template>
 
