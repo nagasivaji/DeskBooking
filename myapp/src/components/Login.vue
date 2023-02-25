@@ -22,7 +22,7 @@
                 <input type="password" class="form-control" placeholder="Enter password" aria-label="" aria-describedby="basic-addon1" v-model="password">
             </div>
             <div>
-                <submit type="submit" class="btn btn-primary" @click="handleSubmit">Log In</submit>
+                <submit type="submit" class="btn btn-primary" @click="handleSubmit">Log In <i class="bi bi-box-arrow-in-right"></i></submit>
             </div>
         </div>
     </div>
@@ -38,11 +38,18 @@ export default {
             password: ''
         }
     },
-    methods: {
-        handleSubmit () {
-            console.log(this.id, this.username, this.password)
+    beforeCreate() {
+        if (localStorage.EmployeeID !== undefined || localStorage.EmployeeID !== null || localStorage.EmployeeID !== ''){
+            window.location.href = "http://localhost:3030/#/home"
         }
     },
+    methods: {
+        handleSubmit () {
+            // console.log(this.id, this.username, this.password)
+            localStorage.setItem('EmployeeID', this.id);
+            window.location.href = "http://localhost:3030/#/home"
+        }
+    }
 }
 </script>
 <style scoped>

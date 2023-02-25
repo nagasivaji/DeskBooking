@@ -23,9 +23,7 @@
                         <div class="c2"><div :class="getClass('C2-4')" @click="handleClick">C2-4</div></div>
                     </div>
                 </div>
-                <div class="_colDiv _colDiv3 conf" id="1,3" :class="getClass('CN-1')" @click="handleClick">
-                        Conference Room - 1
-                </div>
+                <div class="_colDiv _colDiv3 conf" id="1,3" :class="getClass('CN-1')" @click="handleClick">Conference Room - 1</div>
                 <!-- <div class="_colDiv _colDiv4 conf" id="1,4">
                 </div> -->
                 <div class="_colDiv _colDiv5 cube" id="1,5">
@@ -65,25 +63,25 @@
             <!-- row 2  Walking-->
             <div class="_rowDiv _rowDiv2">
                 <div class="_colDiv _colDiv9 walk" id="2,1">
-                    <span v-if="pathArray.includes('2,1')">-</span>
+                    <span v-if="pathArray.includes('2,1')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv10 walk " id="2,2">
-                    <span v-if="pathArray.includes('2,2')">-</span>
+                    <span v-if="pathArray.includes('2,2')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv11 walk" id="2,3">
-                    <span v-if="pathArray.includes('2,3')">-</span>
+                    <span v-if="pathArray.includes('2,3')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv12 walk" id="2,4">
-                    <span v-if="pathArray.includes('2,4')">-</span>
+                    <span v-if="pathArray.includes('2,4')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv13 walk" id="2,5">
-                    <span v-if="pathArray.includes('2,5')">-</span>
+                    <span v-if="pathArray.includes('2,5')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv14 walk" id="2,6">
-                    <span v-if="pathArray.includes('2,6')">-</span>
+                    <span v-if="pathArray.includes('2,6')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv15 walk" id="2,7">
-                    <span v-if="pathArray.includes('2,7')">-</span>
+                    <span v-if="pathArray.includes('2,7')"><img src="../assets/Images/vline.png" alt="" class="vline ms-5"></span>
                 </div>
                 <div class="_colDiv _colDiv16 cube" id="2,8">
                     <div class="r1">
@@ -159,7 +157,7 @@
                     </div>
                 </div>
                 <div class="_colDiv _colDiv23 walk" id="3,7">
-                    <span v-if="pathArray.includes('3,7')">-</span>
+                    <span v-if="pathArray.includes('3,7')"><img src="../assets/Images/vline.png" alt="" class="vline ms-3"></span>
                 </div>
                 <div class="_colDiv _colDiv24 cube" id="3,8">
                     <div class="r1">
@@ -214,13 +212,11 @@
                         <div class="c2"><div :class="getClass('C17-4')" @click="handleClick">C17-4</div></div>
                     </div>
                 </div>
-                <div class="_colDiv _colDiv29 conf" id="4,5" :class="getClass('CN-2')" @click="handleClick">
-                    Conference Room - 2
-                </div>
+                <div class="_colDiv _colDiv29 conf" id="4,5" :class="getClass('CN-2')" @click="handleClick">Conference Room - 2</div>
                 <!-- <div class="_colDiv _colDiv30 conf" id="4,6">
                 </div> -->
                 <div class="_colDiv _colDiv31 walk" id="4,7">
-                    <span v-if="pathArray.includes('4,7')">-</span>
+                    <span v-if="pathArray.includes('4,7')"><img src="../assets/Images/vline.png" alt="" class="vline ms-2"></span>
                 </div>
                 <div class="_colDiv _colDiv32 cube" id="4,8">
                     <div class="r1">
@@ -236,25 +232,25 @@
             <!-- row 5  Walking-->
             <div class="_rowDiv _rowDiv5">
                 <div class="_colDiv _colDiv33 walk" id="5,1">
-                    <span v-if="pathArray.includes('5,1')">-</span>
+                    <span v-if="pathArray.includes('5,1')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv34 walk" id="5,2">
-                    <span v-if="pathArray.includes('5,2')">-</span>
+                    <span v-if="pathArray.includes('5,2')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv35 walk" id="5,3">
-                    <span v-if="pathArray.includes('5,3')">-</span>
+                    <span v-if="pathArray.includes('5,3')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv36 walk" id="5,4">
-                    <span v-if="pathArray.includes('5,4')">-</span>
+                    <span v-if="pathArray.includes('5,4')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv37 walk" id="5,5">
-                    <span v-if="pathArray.includes('5,5')">-</span>
+                    <span v-if="pathArray.includes('5,5')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv38 walk" id="5,6">
-                    <span v-if="pathArray.includes('5,6')">-</span>
+                    <span v-if="pathArray.includes('5,6')"><img src="../assets/Images/hline.png" alt="" class="hline"></span>
                 </div>
                 <div class="_colDiv _colDiv39 walk" id="5,7">
-                    <span v-if="pathArray.includes('5,7')">-</span>
+                    <span v-if="pathArray.includes('5,7')"><img src="../assets/Images/vline.png" alt="" class="vline ms-5"></span>
                 </div>
                 <div class="_colDiv _colDiv40 cube" id="5,8">
                     <div class="r1">
@@ -269,9 +265,7 @@
             </div>
             <!-- row 6 Desks -->
             <div class="_rowDiv _rowDiv6">
-                <div class="_colDiv _colDiv41 conf" id="6,1" :class="getClass('CN-3')" @click="handleClick">
-                    Conference Room - 3
-                </div>
+                <div class="_colDiv _colDiv41 conf" id="6,1" :class="getClass('CN-3')" @click="handleClick">Conference Room - 3</div>
                 <div class="_colDiv _colDiv42 cube" id="6,2">
                     <div class="r1">
                         <div class="c1"><div :class="getClass('C20-1')" @click="handleClick">C20-1</div></div>
@@ -322,9 +316,7 @@
                         <div class="c2"><div :class="getClass('C24-4')" @click="handleClick">C24-4</div></div>
                     </div>
                 </div>
-                <div class="_colDiv _colDiv47 conf" id="6,7" :class="getClass('CN-4')" @click="handleClick">
-                    Conference Room - 4
-                </div>
+                <div class="_colDiv _colDiv47 conf" id="6,7" :class="getClass('CN-4')" @click="handleClick">Conference Room - 4</div>
                 <!-- <div class="_colDiv _colDiv48 conf" id="6,8">
                 </div> -->
             </div>
@@ -334,11 +326,13 @@
 
 <script>
 export default {
+    props: ['pathArray', 'sendData', 'bookingCount', 'myDesk'],
     data() {
         return {
             bookedDesks : ['C1-1', 'C1-2', 'CN-1'],
             reserverdDesks : ['C1-3', 'CN-2'],
-            pathArray :['2,2', '2,3', '2,4', '2,5', '2,6', '2,7']
+            selectedDesks: [],
+            pathArray : this.pathArray
         }
     },
     methods: {
@@ -347,12 +341,37 @@ export default {
                 return 'booked'
             } else if (this.reserverdDesks.includes(deskId)) {
                 return 'reserved'
-            } else {
+            } else if(this.selectedDesks.includes(deskId)) {
+                return 'selected'
+            } else if(this.myDesk.includes(deskId)) {
+                return 'myDesk'
+            }
+            else {
                 return 'notBooked'
             }
         },
         handleClick (event){
-            console.log(event.target.innerHTML)
+            var deskId = event.target.innerHTML;
+            if(deskId.includes('Conference')){
+                deskId = 'CN-' + deskId.split(' ')[3];
+            }
+            
+            console.log(deskId)
+            if(this.selectedDesks.includes(deskId)) {
+                const index = this.selectedDesks.indexOf(deskId);
+                if (index > -1) { // only splice array when item is found
+                    this.selectedDesks.splice(index, 1); // 2nd parameter means remove one item only
+                }
+            } else {
+                this.selectedDesks.push(deskId);
+            }   
+
+            console.log(this.bookingCount)
+            if(this.selectedDesks.length > this.bookingCount) {
+                this.selectedDesks.shift()
+            }
+            // console.log(this.selectedDesks)
+            this.sendData(this.selectedDesks)
         }
     },
 }
@@ -363,6 +382,7 @@ export default {
     ._map{
         color: white;
         background-color: rgb(77, 77, 77);
+        zoom: 65%;
     }
 
     /* MAIN TABLE */
@@ -458,6 +478,16 @@ export default {
         font-size: 50px;
     }
 
+    ._map ._tableDiv ._rowDiv .walk span .vline{
+        width: 10px;
+        height: 50px;
+    }
+
+    ._map ._tableDiv ._rowDiv .walk span .hline{
+        width: 50px;
+        height: 10px;
+    }
+
 
     /* Color coding  for CUBES*/
     ._map ._tableDiv ._rowDiv .cube div div .booked{
@@ -471,6 +501,15 @@ export default {
 
     ._map ._tableDiv ._rowDiv .cube div div .reserved{
         background-color: rgb(211, 214, 0);
+        pointer-events:none
+    }
+
+    ._map ._tableDiv ._rowDiv .cube div div .selected{
+        background-color: rgb(133, 133, 133);
+    }
+
+    ._map ._tableDiv ._rowDiv .cube div div .myDesk{
+        background-color: rgb(51, 13, 242);
     }
 
     /* Color coding for CONF ROOMS */
@@ -485,6 +524,15 @@ export default {
 
     ._map ._tableDiv ._rowDiv .reserved{
         background-color: rgb(211, 214, 0);
+        pointer-events:none
+    }
+
+    ._map ._tableDiv ._rowDiv .selected{
+        background-color: rgb(133, 133, 133);
+    }
+
+    ._map ._tableDiv ._rowDiv .myDesk{
+        background-color: rgb(51, 13, 242);
     }
 
 

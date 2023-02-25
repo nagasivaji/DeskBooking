@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../views/Home.vue'
-import Map from '../views/Map.vue'
+import MoreActionBtn from '../components/MoreActionBtns.vue'
 
 const routes = [
   {
@@ -15,9 +15,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/showMap',
-    name: 'Map',
-    component: Map
+    path: '/more',
+    name: 'MoreActionBtn',
+    component: MoreActionBtn
   }
 ]
 
