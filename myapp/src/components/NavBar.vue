@@ -35,7 +35,7 @@
         methods: {
             logOut() {
                 localStorage.EmployeeID = ''
-                window.location.href = "http://localhost:3030/#/"
+                window.location.href = this.$url+"/"
             }
         },
     }

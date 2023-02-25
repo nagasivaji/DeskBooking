@@ -55,7 +55,7 @@ export default {
     },
     beforeMount() {
         if (localStorage.EmployeeID === undefined || localStorage.EmployeeID === null || localStorage.EmployeeID === ''){
-            window.location.href = "http://localhost:3030/#/"
+            window.location.href = this.$url+"/"
         }
         // console.log('Employee ID: ',localStorage.EmployeeID)
         if (this.bookingStatus) {

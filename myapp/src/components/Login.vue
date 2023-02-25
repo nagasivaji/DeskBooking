@@ -40,14 +40,14 @@ export default {
     },
     beforeCreate() {
         if (localStorage.EmployeeID !== undefined || localStorage.EmployeeID !== null || localStorage.EmployeeID !== ''){
-            window.location.href = "http://localhost:3030/#/home"
+            window.location.href = this.$url+"/home"
         }
     },
     methods: {
         handleSubmit () {
             console.log(this.id, this.username, this.password)
             localStorage.setItem('EmployeeID', this.id);
-            window.location.href = "http://localhost:3030/#/home"
+            window.location.href = this.$url+"/home"
         }
     }
 }
