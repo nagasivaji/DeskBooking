@@ -45,7 +45,7 @@ export default {
     },
     methods: {
         handleSubmit () {
-            // console.log(this.id, this.username, this.password)
+            console.log(this.id, this.username, this.password)
             localStorage.setItem('EmployeeID', this.id);
             window.location.href = "http://localhost:3030/#/home"
         }

@@ -22,12 +22,23 @@
                 <li class="nav-item">
                     <router-link to="/" class="nav-link active" aria-current="page">Account settings</router-link>
                 </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" @click="logOut">Log Out</button>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 </template>
 <script>
+    export default{
+        methods: {
+            logOut() {
+                localStorage.EmployeeID = ''
+                window.location.href = "http://localhost:3030/#/"
+            }
+        },
+    }
 </script>
 
 <style scoped>
