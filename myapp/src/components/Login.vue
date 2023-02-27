@@ -1,7 +1,7 @@
 <template>
     <div class="_Log_in">
         <div class="_tittle">
-            <h1 class="display-4">welcome to hot desk booking</h1>
+            <h1 class="display-4">Welcome to <i class="bi bi-fire"></i> desk booking</h1>
         </div>
         <div class="_Login">
         <div class="_loginLogo">
@@ -38,16 +38,42 @@ export default {
             password: ''
         }
     },
-    beforeCreate() {
-        if (localStorage.EmployeeID !== undefined || localStorage.EmployeeID !== null || localStorage.EmployeeID !== ''){
+    beforeMount() {
+        // if (localStorage.EmployeeID !== undefined || localStorage.EmployeeID !== null || localStorage.EmployeeID !== ''){
+        //     window.location.href = this.$url+"/home"
+        // }
+        var x = this.getCookie('EmployeeID');
+        if(x !== undefined && x !== null && x !== ''){
             window.location.href = this.$url+"/home"
         }
     },
     methods: {
         handleSubmit () {
-            console.log(this.id, this.username, this.password)
-            localStorage.setItem('EmployeeID', this.id);
+            // console.log(this.id, this.username, this.password)
+            // localStorage.setItem('EmployeeID', this.id);
+            // window.location.href = this.$url+"/home"
+
+            this.setCookie('EmployeeID', this.id, 2)
             window.location.href = this.$url+"/home"
+        },
+        setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        },
+        getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
         }
     }
 }
@@ -56,9 +82,11 @@ export default {
 
     ._Log_in{
         height: 100vh;
-        background: #B2FEFA;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: #ECF9FF;
+        /* background: #B2FEFA;  
+        background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  
+        background: linear-gradient(to right, #0ED2F7, #B2FEFA);  */
+        font-family: 'Ubuntu', sans-serif;
     }
 
     ._tittle{
@@ -66,10 +94,12 @@ export default {
         padding-top: 40px;
     }
     ._tittle h1{
-        color: rgb(255, 115, 0);
+        color: rgb(255, 85, 0);
+        /* color: #FF6E31; */
         font-weight: 500;
-        text-shadow: 3px 5px 5px rgba(255, 255, 255, 0.527);
         letter-spacing: 1.5px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 55px;
     }
     ._Login{
         display: flex;

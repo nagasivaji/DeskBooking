@@ -8,15 +8,15 @@
         <div class="_options">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked @click="onClickOption" value="singleDay">
-                <label class="form-check-label" for="flexRadioDefault1">Book Desk</label>
+                <label class="form-check-label" for="flexRadioDefault1"><i class="bi bi-check2-circle"></i> Book Desk</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @click="onClickOption" value="multipleDays">
-                <label class="form-check-label" for="flexRadioDefault2">Book for multiple days</label>
+                <label class="form-check-label" for="flexRadioDefault2"><i class="bi bi-calendar-event"></i> Book for multiple days</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" @click="onClickOption" value="teamBooking">
-                <label class="form-check-label" for="flexRadioDefault2">Book for team</label>
+                <label class="form-check-label" for="flexRadioDefault2"><i class="bi bi-people"></i> Book for team</label>
             </div>
         </div>
         <!-- SinleDay -->
@@ -25,7 +25,7 @@
                 <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" :myDesk="''"/>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" @click="onClickSingleDay">Book</button>
+                <button class="btn btn-primary mb-5" @click="onClickSingleDay">Book</button>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                 <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" :myDesk="''"/>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto mt-5 mb-5">
-                <button class="btn btn-primary" @click="onClickMultipleBooking">Book</button>
+                <button class="btn btn-primary mb-5" @click="onClickMultipleBooking">Book</button>
             </div>
         </div>
 
@@ -72,8 +72,8 @@
             <div class="_mapDiv">
                 <Map :pathArray='pathArray' :sendData="getData" :bookingCount="bookingCount" :myDesk="''"/>
             </div>
-            <div class="d-grid gap-2 col-6 mx-auto mt-5 mb-5">
-                <button class="btn btn-primary" @click="onClickTeamBooking">Book</button>
+            <div class="d-grid gap-2 col-6 mx-auto mt-5">
+                <button class="btn btn-primary mb-5" @click="onClickTeamBooking">Book</button>
             </div>
         </div>
     </div>
@@ -140,12 +140,21 @@ export default {
         },
         onClickSingleDay() {
             console.log('single', this.data)
+            var x = this.getCookie('EmployeeID')
+            this.$bookedArray.push('C2-3')
+            this.$showNotify('Booking Confirmed', '11th floor Blue Wing C2-3', 'success')
+            window.location.href = this.$url+"/home"
+
         },
         onClickMultipleBooking (){
             console.log('multiple', this.data, this.startDate, this.endDate)
+            this.$showNotify('Booking Confirmed', '11th floor Blue Wing C2-3', 'success')
+            window.location.href = this.$url+"/home"
         },
         onClickTeamBooking () {
             console.log('team', this.data, this.bookingCount, this.emplIds, this.selectDate)
+            this.$showNotify('Booking Confirmed', '11th floor Blue Wing C2-3', 'success')
+            window.location.href = this.$url+"/home"
         },
         addEmplIds(event) {
             // console.log(event)
@@ -158,7 +167,17 @@ export default {
         },
         showConfirmation() {
             window.location.href = this.$url+"/"
-        }
+        },
+        getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        },
     },
 }
 </script>
@@ -170,10 +189,13 @@ export default {
         justify-content: center;
         align-items: center;
         margin: 20px 10px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #FC7300;
     }
 
     ._More ._options{
         margin-left: 100px;
+        font-family: 'Ubuntu', sans-serif;
     }
 
     ._More ._options div{
